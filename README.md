@@ -16,6 +16,8 @@
 1. Mead's Guide to getopt: [Click Here](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)
 
 ## Assembly References
+1. Felix Cloutier Instruction Reference: [Click Here](https://www.felixcloutier.com/x86/)
+
 ![image](./docs/register-usage.png)
 
 ## Create code.level.up Local Repo
