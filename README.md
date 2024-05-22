@@ -16,6 +16,7 @@
 1. Mead's Guide to getopt: [Click Here](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)
 
 ## Assembly References
+![image](./docs/register-usage.png)
 
 ## Create code.level.up Local Repo
 1.  Log into your account at: https://code.levelup.cce.af.mil/
