@@ -3,6 +3,7 @@
 ## Table Of Contents
 1. [General References](#general-references)
 1. [C Programming References](#c-programming-references)
+1. [Assembly References](#assembly-references)
 1. [Create code.level.up Local Repo](#create-codelevelup-local-repo)
 1. [Create Secured RDP Gateway Ubuntu](#create-secured-rdp-gateway-ubuntu)
 1. [Scrum References](#scrum-references)
@@ -13,6 +14,8 @@
 
 ## C Programming References
 1. Mead's Guide to getopt: [Click Here](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)
+
+## Assembly References
 
 ## Create code.level.up Local Repo
 1.  Log into your account at: https://code.levelup.cce.af.mil/
