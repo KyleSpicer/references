@@ -1,5 +1,5 @@
-# References
-
+# References  
+- This document serves to compile a comprehensive list of valuable links and references covering various programming topics."
 ## Table Of Contents
 1. [General References](#general-references)
 1. [C Programming References](#c-programming-references)
