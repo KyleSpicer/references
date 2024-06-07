@@ -2,6 +2,7 @@
 - This document serves to compile a comprehensive list of valuable links and references covering various programming topics."
 ## Table Of Contents
 1. [General References](#general-references)
+1. [Pre-Commit Setup and Use](#pre-commit-setup-and-use)
 1. [C Programming References](#c-programming-references)
 1. [Assembly References](#assembly-references)
 1. [Create code.level.up Local Repo](#create-codelevelup-local-repo)
@@ -11,6 +12,44 @@
 ## General References
 1. Beej's Guide: https://beej.us/guide/
 2. Black Wasp: https://www.blackwasp.co.uk/
+
+## Pre-Commit Setup and Use
+This section will explain how to configure and use Python's pre-commit framework.
+
+Reference: https://pre-commit.com/
+
+1. Ensure you have Python installed on your system: https://www.python.org/downloads/
+2. Install pre-commit using ```pip install pre-commit```
+3. Add a `.pre-commit-config.yaml` to top level of project directory (example below)
+4. Add you ```.clang-format``` file to top level of project directory
+4. From the top-level of your project directory, run ```pre-commit install``` to install the git hook scripts.
+5. Once successfully installed, anytime you commit changes to git, pre-commit will change your specified formatting settings.
+
+```
+**Example .pre-commit-config.yaml:**
+# Configuration File for Pre-Commit Hooks
+# exclude: Docs/
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: check-merge-conflict
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+  - id: trailing-whitespace
+
+# C Hooks
+# intentionally left blank
+
+# Clang-Format
+- repo: https://github.com/pre-commit/mirrors-clang-format
+  rev: v17.0.4
+  hooks:
+  - id: clang-format
+    args: ['--style=file']
+```
 
 ## C Programming References
 1. Mead's Guide to getopt: [Click Here](https://azrael.digipen.edu/~mmead/www/Courses/CS180/getopt.html)
