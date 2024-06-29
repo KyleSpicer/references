@@ -4,6 +4,7 @@
 1. [PowerShell Module Installs](#powershell-module-installs)
 1. [Software Installs](#software-installs)
 1. [Pip Installs](#pip-installs)
+1. [References](#references)
 
 # PowerShell Module Installs
 1. [posh-git](#posh-git)
@@ -152,3 +153,7 @@ Version Management:
 
 User-Friendly CLI:
 - Poetry provides a command-line interface (CLI) that is intuitive and easy to use, with commands for adding, removing, and updating dependencies, running scripts, and managing environments.
+
+# References
+1. Useful PS links --> [Click Here](https://github.com/janikvonrotz/awesome-powershell)
+1. 50 PS Modules to checkout --> [Click Here](https://blog.ironmansoftware.com/50-of-the-top-powershell-modules-to-check-out/)
