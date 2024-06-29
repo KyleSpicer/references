@@ -1,8 +1,30 @@
 # Windows 10 - Environment Setup
 
 ## Table of Contents
+1. [PowerShell Module Installs](#powershell-module-installs)
 1. [Software Installs](#software-installs)
 1. [Pip Installs](#pip-installs)
+
+# PowerShell Module Installs
+1. [posh-git](#posh-git)
+
+## Posh-Git
+### What is Posh-Git?
+- Posh-git is a PowerShell module that provides Git enhancements, including informative prompts and tab completion for Git commands, making it easier to work with Git in the PowerShell environment.
+
+### Example using posh-git:
+```powershell
+C:\Users\Desktop\github\references [main ≡ +0 ~1 -0 !]>
+```
+
+**PS commands to install/import posh-git:**
+```
+Install-Module posh-git
+Import-Module posh-git
+```
+
+**NOTE:** Add `Import-Module posh-git` to $PROFILE script to have it loaded with every powershell instance. Otherwise, you would have to import the module anytime you want to use it.
+
 
 # Software Installs
 1. [Visual Studio IDE](#visual-studio-ide)
