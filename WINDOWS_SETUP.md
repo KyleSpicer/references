@@ -38,6 +38,7 @@ Import-Module posh-git
 1. [Ghidra](#ghidra)
 1. [Ncat](#ncat)
 1. [WSL 2](#wsl-2)
+1. [Wireshark](#wireshark)
 
 ## Visual Studio IDE
 - [VS IDE Install Link](https://visualstudio.microsoft.com/vs/)
@@ -114,6 +115,17 @@ WSL2, or Windows Subsystem for Linux 2, is a compatibility layer for running Lin
 
 WSL2 provides a way for developers to use a Linux environment directly on Windows without the need for dual-booting or running a full virtual machine.
 
+## Wireshark
+[Link to Wireshark Download](https://www.wireshark.org/download.html)
+
+### What is Wireshark?
+- Wireshark is an open-source network protocol analyzer and packet sniffer. It can be used to inspect and analyze network traffic.  
+
+- It provides a wealth of information, including the source and destination IP address, protocol type, and even payload contents.
+
+- Wireshark supports many network protocols, including Ethernet, TCP/IP, DNS, HTTP, and many more.
+
+- Wireshark's ability to decode the conversations happening in your network can be a powerful tool for troubleshooting network problems, analyzing performance, or learning more about what's happening in a network. 
 
 # Pip Installs
 1. [Pip Version](#pip-version)
