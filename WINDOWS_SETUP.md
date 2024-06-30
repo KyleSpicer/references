@@ -8,6 +8,7 @@
 1. [PowerShell Module Installs](#powershell-module-installs)
 1. [Software Installs](#software-installs)
 1. [Pip Installs](#pip-installs)
+1. [Create Daily Restart Task](#create-daily-restart-task)
 1. [References](#references)
 
 # PowerShell Module Installs
@@ -186,6 +187,38 @@ Version Management:
 
 User-Friendly CLI:
 - Poetry provides a command-line interface (CLI) that is intuitive and easy to use, with commands for adding, removing, and updating dependencies, running scripts, and managing environments.
+
+## Create Daily Restart Task
+
+### Purpose:
+This Task will restart your system using a custom task.
+
+Some benefits of restarting your computer daily include: 
+- Improved Performance: Restarting clears the RAM, stops memory leaks, and closes unnecessary background processes, ensuring your computer runs smoothly.
+- Stability: Restarting resets the system state, clearing minor glitches and bugs that can accumulate over time, leading to a more stable and reliable computer.
+- Enhanced Security: Regularly applying security updates and closing open sessions reduces vulnerabilities and ensures a secure computing environment.
+- Extended Hardware Lifespan: By not running components continuously, restarts can help reduce wear and tear, potentially extending the lifespan of your computer's hardware.
+- Improved Network Performance: Restarting reinitializes network connections, which can resolve issues with connectivity and improve overall network performance.
+
+### Steps to Creating Daily Restart Task:
+
+1. Open task manager -> `Win + R`
+1. Create Basic Task
+1. Name Task: `Daily Restart` > Click `Next`
+1. Set Trigger: Choose `Daily`, `Set desired time`, `Recur every set to 1` > Click Next
+1. Set Action:  
+    - Choose `Start a program` > Click Next
+    - Program/script: `shutdown`
+    - Add arguments (optional): `/r /f /t 0`
+    - Click Next
+1. Click `Finish` to set task.
+
+### Argument Explanation:
+- `/r`: This argument tells the shutdown command to restart the computer instead of shutting it down.
+
+- `/f`: This forces running applications to close. It will forcefully terminate any running programs without warning the user, which ensures that the restart process isn't blocked by any open applications.
+
+- `/t 0`: This sets the time delay before the restart to 0 seconds. The restart will occur immediately without any countdown or delay.
 
 # References
 1. Useful PS links --> [Click Here](https://github.com/janikvonrotz/awesome-powershell)
