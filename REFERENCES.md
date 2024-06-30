@@ -60,6 +60,11 @@ repos:
 ![image](./docs/register-usage.png)
 
 ## Create code.level.up Local Repo
+**NOTE:** Ensure your git config is properly setup.
+```
+git config --global user.name "user.name"
+git config --global user.email "youremail@something.com"
+```
 1.  Log into your account at: https://code.levelup.cce.af.mil/
 2.  Create access token:
     - goto Preferences > Access Tokens > Add new token
@@ -67,8 +72,10 @@ repos:
     - save your access token (you won't see it again and need it when you clone the repo)
 3. Clone repository:
     - git -c http.sslVerify=false clone http://path/to/repo
-    - change directory into repository
-    - git config http.sslVerify "false"
+    - change directory into repository and run the following:
+  ```
+   git config http.sslVerify "false"
+  ```
 
 ## Create Secured RDP Gateway Ubuntu
 Purpose: This section contains resources for creating a RDP gateway using Apache Guacamole, then creating a secured tunnel using CloudFlare using Ubuntu.
