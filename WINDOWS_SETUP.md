@@ -1,5 +1,9 @@
 # Windows 10 - Environment Setup
 
+### Purpose: 
+- This document provides a comprehensive guide for setting up a development environment on Windows 10. 
+- It covers essential PowerShell modules, software installations, and Python package installs to ensure a robust and efficient workspace for developers.
+
 ## Table of Contents
 1. [PowerShell Module Installs](#powershell-module-installs)
 1. [Software Installs](#software-installs)
