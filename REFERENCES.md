@@ -60,6 +60,11 @@ repos:
 ![image](./docs/register-usage.png)
 
 ## Create code.level.up Local Repo
+**NOTE:** Ensure your git config is properly setup.
+```
+git config --global user.name "user.name"
+git config --global user.email "youremail@something.com"
+```
 1.  Log into your account at: https://code.levelup.cce.af.mil/
 2.  Create access token:
     - goto Preferences > Access Tokens > Add new token
