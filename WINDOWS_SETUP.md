@@ -37,6 +37,7 @@ Import-Module posh-git
 1. [Java Development Kit](#java-development-kit)
 1. [Ghidra](#ghidra)
 1. [Ncat](#ncat)
+1. [WSL 2](#wsl-2)
 
 ## Visual Studio IDE
 - [VS IDE Install Link](https://visualstudio.microsoft.com/vs/)
@@ -96,6 +97,22 @@ Add to $PATH environment variable: C:\Program Files\Git\
 
 ### What is Ncat?
 - Ncat is a versatile networking utility, part of the Nmap suite, designed for various network-related tasks. It can be used for debugging, scanning, transferring files, creating network servers, and much more.
+
+## WSL 2
+[Link to WSL 2 Install Guide](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
+
+### What is WSL 2 (Windows Subsytem for Linux 2)?
+WSL2, or Windows Subsystem for Linux 2, is a compatibility layer for running Linux binary executables natively on Windows 10 and Windows 11. It is an improvement over the original WSL (Windows Subsystem for Linux) in several ways:
+
+- Full Linux Kernel: WSL2 uses a real Linux kernel with Windows, which means it's capable of running all Linux software.
+
+- Performance: WSL2 is significantly faster than WSL1, especially for file system-heavy operations.
+
+- Compatibility: Since WSL2 runs a full Linux kernel, it offers much better compatibility for Linux applications, including support for Docker and other development tools that require full Linux kernel functionality.
+
+- Resource Usage: WSL2 uses a lightweight VM, but it still allows you to control how much memory and CPU it can use, providing a balance between resource usage and performance.
+
+WSL2 provides a way for developers to use a Linux environment directly on Windows without the need for dual-booting or running a full virtual machine.
 
 
 # Pip Installs
