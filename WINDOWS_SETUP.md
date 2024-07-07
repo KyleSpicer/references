@@ -44,6 +44,7 @@ Import-Module posh-git
 1. [Ncat](#ncat)
 1. [WSL 2](#wsl-2)
 1. [Wireshark](#wireshark)
+1. [Docker As A Service](#docker-as-a-service)
 
 ## Visual Studio IDE
 - [VS IDE Install Link](https://visualstudio.microsoft.com/vs/)
@@ -131,6 +132,99 @@ WSL2 provides a way for developers to use a Linux environment directly on Window
 - Wireshark supports many network protocols, including Ethernet, TCP/IP, DNS, HTTP, and many more.
 
 - Wireshark's ability to decode the conversations happening in your network can be a powerful tool for troubleshooting network problems, analyzing performance, or learning more about what's happening in a network. 
+
+## Docker As A Service
+[Link to step-by-step video](https://www.youtube.com/watch?v=d7Pi9AA_O3Q)
+
+1. [Enable Containers and Hyper-V](#enable-containers-and-hyper-v)
+2. [Download Docker Zip](#download-docker-zip)
+1. [Add Docker to Path Environment Variables](#add-docker-to-path-environment-variables)
+1. [Add User Variable For Docker Daemon](#add-user-variable-for-docker-daemon)
+1. [Verify Docker is in Path](#verify-docker-is-in-path)
+1. [Create Windows Service for Docker](#create-windows-service-for-docker)
+1. [Start Docker Service](#start-docker-service)
+1. [Ensure Docker Service Starts Automatically](#ensure-docker-service-starts-automatically)
+
+### Enable Containers and Hyper-V:  
+1. In search bar, follow this path:   
+- ``Add or Remove Programs > Programs and Features > Turn Windows Features on/off``
+- Ensure Containers and Hyper-V is selected and click OK.
+- Once finished, Windows will need to reboot.
+
+### Download Docker Zip
+[Link to download stable Docker zip](https://download.docker.com/win/static/stable/x86_64/)
+1. Download desired .zip, Example: `docker-27.0.3.zip`
+
+### Add Docker To Path Environment Variables
+1. Open download, copy `docker` folder to `C:` Drive
+1. System Properties > Environment Variables > Path > New > `Add path/to/docker/folder` > Click OK.
+
+### Add User Variable For Docker Daemon
+- Used by docker client to know where to look for docker daemon that is running.
+1. System Properties > Environment Variables > New User Variable
+    ```
+    Variable Name: DOCKER_HOST
+    Variable Value: tcp://127.0.0.1:2376
+    ```
+1. Click OK to save changes
+
+### Verify Docker is in Path
+1. Open a new Command Prompt or Powershell session.
+1. Check Docker Version
+    ```
+    C:\Users\kyled> docker -v
+    Docker version 27.0.3, build 7d4bcd8
+    ```
+1. If Docker version displays without error, continue.
+
+### Create Windows Service for Docker
+1. Open a PowerShell Terminal
+1. Enter the following:
+    ```
+    sc create Docker binpath= "c:\docker\dockerd.exe --run-service -H tcp:\\localhost:2376"
+    ```
+- Using `sc.exe` this will create a service named `Docker`, the will execute the docker daemon and start the service on the specified port of `2376`.
+1. Verify the service was created:
+    ```
+    C:\docker> sc create Docker binpath= "c:\docker\dockerd.exe --run-service -H tcp://localhost:2376"
+    [SC] CreateService SUCCESS
+    ```
+
+### Start Docker Service
+1. Open PowerShell terminal and enter the following:
+```
+C:\docker> sc start Docker
+
+SERVICE_NAME: Docker
+        TYPE               : 10  WIN32_OWN_PROCESS
+        STATE              : 2  START_PENDING
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 9664
+        FLAGS              :
+```
+
+1. You can query a service by entering the following:
+```
+C:\docker> sc query Docker
+
+SERVICE_NAME: Docker
+        TYPE               : 10  WIN32_OWN_PROCESS
+        STATE              : 4  RUNNING
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+```
+### Ensure Docker Service Starts Automatically
+1. In search bar, enter `services`
+1. Find `Docker` in Services list.
+1. Right click `Docker`, Properties, change to `Automatic`
+1. This will ensure the Docker service automatically starts after reboot.
 
 # Pip Installs
 1. [Pip Version](#pip-version)
