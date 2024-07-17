@@ -8,6 +8,7 @@
 1. [Create code.level.up Local Repo](#create-codelevelup-local-repo)
 1. [Create Secured RDP Gateway Ubuntu](#create-secured-rdp-gateway-ubuntu)
 1. [Scrum References](#scrum-references)
+1. [Add Windows 10 VM To Proxmox](#add-windows-10-vm-to-proxmox)
 
 ## General References
 1. Beej's Guide: https://beej.us/guide/
@@ -90,3 +91,6 @@ Purpose: This section contains resources for creating a RDP gateway using Apache
 ## Scrum References
 1. Agile Manifesto: [Click Here](https://agilemanifesto.org/)
 1. 2020 Scrum Guide: [Click Here](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf)
+
+## Add Windows 10 VM To Proxmox
+[Add Windows VM to Proxmox Link](https://www.youtube.com/watch?v=-KTTmrA3DX8)
